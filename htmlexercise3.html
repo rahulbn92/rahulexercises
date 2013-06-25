@@ -1,0 +1,170 @@
+
+<html>
+  <body bgcolor="skyblue">
+ 
+  <head>
+    <title>
+      HTML FORM EXERCISE
+    </title>
+  </head>
+  
+  <body>
+    <h1 align ="center">
+      HTML FORM EXERCISE
+	</h1>
+
+	<p> 
+	  <span style = "color :green; font-style :bold ; "> Please note: </span> This example demonstares how HTML Forms can be used. Submit button should submit the form and Reset button should reset the form(Revert the changes in form feild. The form layout should be the same as below: 
+	</p>
+
+	<h2>
+	CONTACT FORM
+	</h2>
+
+
+    <form  onsubmit = "return display()" method = "post" >
+
+      <p>
+        <table>
+          <tr>
+            <td> Your name :</td>
+            <td> <input type= "text" name="Your name:"  / > </td>
+          </tr>
+
+          <tr>
+ 		    <td>E-mail*: </td>
+ 		    <td> <input type= "text" name="Your E-mail id" style = "background-color :yellow"/ > 
+            </td>
+          </tr>
+
+          <tr>
+ 		    <td>Phone number:</td>
+ 		    <td> <input type= "text" name=" Your Phone number" style = "background-color :yellow" / > </td>
+ 		  </tr>
+
+		  <tr>
+		    <td> Website* :</td>
+		    <td> <input type= "text" name="website address" value ="http//"/ > </td>
+		  </tr>
+
+	    </table>
+      </p> 
+
+      <h><b>COMMENTS*: </b></h>
+        <p> <textarea rows ="5" cols ="20" name = "your views"> </textarea></p>
+ 
+      <h> <b>Text field </b> </h>
+        <p> Your name: <input type= "text2" name="Your name" style = "background-color :yellow" / ></p>
+
+      <p> <b>Password </b> </p>
+        <p> Password : <input type= "text" name="Password" / ></p>
+
+      <h> <b>Radio buttons</b> </h>
+        <p> do u like pizza?
+          <p><input id ="yes" type ="radio" name ="do u like pizza" value ="yes" /> 
+ 	      <label for ="yes" >Yes</label>
+          <p><input id ="no" type ="radio" name ="do u like pizza" value ="no"/> 
+ 	      <label for ="no" >No</label>
+          <p><input id ="maybe" type ="radio" name ="do u like pizza" value ="maybe"/> 
+          <label for ="maybe" >Maybe</label>
+          <p><input id ="never" type ="radio" name ="do u like pizza" value ="never tried"/>
+          <label for ="never" >Never tried</label>
+		</p>
+
+      <h> <b>Checkbox </b> </h>
+        <p>  <input id ="checkbox" type ="checkbox" name ="do u like our services" /> 
+	    <label for ="checkbox" >Do u like our services:</label>
+        </p>
+
+	  <h> <b> Text area </b></h>
+        <p> anything you like to say : 
+          <br/>
+        <textarea name ="you said "rows ="5" cols ="20" ></textarea>
+        </p>
+
+      <h> <b> I like </b></h>
+        <p>  
+          <select size ="5" multiple>
+            <option name ="you like" value="Mushrooms">Mushrooms</option>
+            <option name ="you like" value="Green Peppers">Green Peepers</option>
+            <option name ="you like" value="Onions">Onions</option>
+            <option name ="you like" value="tomatoes">Tomatoes</option>
+            <option name ="you like" value="Olives">Olives</option>  
+          </select>
+        </p>
+
+      <h> <b> Menu </b></h>
+        <p> Your favourite color: 
+          <br/> 
+          <select>
+            <option name ="your favourite color is:" value="red">Red</option>
+  			<option name ="your favourite color is:" value="black">Black</option>
+  			<option name ="your favourite color is:" value="green">Green</option>
+  			<option name ="your favourite color is:" value="yellow">Yellow</option>
+		  </select>
+		</p>
+
+	  <h> <b> Attach files </b></h>
+        <p>Attachment:
+          </br> 
+          <INPUT TYPE="file" NAME="attachedfile" MAXLENGTH=50 ALLOW="text/*" > 
+        </p>
+
+      <h> <b> Buttons </b></h>
+        <p>
+          <input type = "submit" name ="submitted" value ="submit" onclick = "return submitDisplay ()" /> 
+		  <input type = "Reset" name ="reset" value ="reset" onclick = "return submitDisplay ()" />
+		</p>
+    </form>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
