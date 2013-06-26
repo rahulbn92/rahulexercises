@@ -1,0 +1,109 @@
+
+<!DOCTYPE CSS>
+<style type="text/css">
+    
+  header ,footer ,section ,nav
+    {
+      margin: 0px;
+    }
+
+  header
+    { 
+      display: block;width: 1000px;      
+      background-color: #b2e7ff;
+      font-family: tahoma;
+      font-size: 24px;
+      color: black;
+      text-align: center;
+      border-bottom: solid 2px #0ab1ff;
+      overflow: hidden;
+    }
+
+  #singlebox
+    {
+      width: 1000px;
+      overflow: hidden;
+    }
+    
+  #nav
+    { 
+      display: block;
+      width: 230px;
+      float: left;
+      background-color: #0ab1ff;
+      padding-top: 25px;
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-bottom: 1025px;
+      margin-bottom: -1000px;
+      overflow: hidden;
+    }
+
+  #nav1 
+    {
+      font-size: 18px;
+      color: black;
+      font-family: tahoma;
+    }
+
+  #nav2 a
+    {
+      font-size: 14px;
+      color: white;
+      font-family: tahoma;
+    }
+  
+  #nav2
+    {
+      font-size: 14px;
+      color: white;
+      font-family: tahoma;
+    }
+  
+  #nav3
+    {
+      font-size: 12px;
+      color: black;
+      font-family: tahoma;
+    }
+      
+  #section
+    {
+      float: left;
+      display: block;
+      width: 710px;
+      padding: 20px;
+      background-color: #ededed;
+      padding-bottom: 1020px;
+      margin-bottom: -1000px;
+      overflow: hidden;
+    }
+
+  #sec1
+    {
+      font-family: tahoma;
+      font-size: 24px;
+      color: black;
+    }
+
+  #sec2 
+    {
+      font-family: tahoma;
+      font-size: 14px;
+      color: #802525;
+    }
+
+  footer
+    {
+      background-color: #3cff78;
+      font-family: tahoma;
+      font-size: 24px;
+      color: black;
+      text-align: center;
+      border-bottom: solid 2px #0ab1ff;
+      width: 1000px;
+      display: block;
+      clear: left;
+    }
+
+</style>
