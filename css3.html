@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      css exercise 3
+    </title>
+    <link rel="stylesheet" type="text/css" href="cssexer3.css">
+  </head>
+  
+  <body>
+    <header>
+      
+      <div id="header1"> 
+      </div> 
+      <div id="header2">
+        <span class="subheader21">Email us at:</span><span class="subheader22">sales@vinsol.com</span>&nbsp;&nbsp;<span class="subheader21">Skype:</span><span class="subheader22">vinsol</span>
+      </div>
+    </header>
+
+    <div id="heading">Please fill the form below:</div>
+
+    <div id="formbox">
+      <form onsubmit ="return display() " method ="post">
+      
+        <p><label id ="label"for ="inputfn">First name</label>
+          <input id="inputfn"type ="text" name="First name"/>
+        </p>
+        <p><label  id ="label" for ="inputln">Last name</label>
+          <input id="inputln"type ="text" name="Last name"/>
+        </p>
+        <p><label id ="label" for ="inputemail">Email address</label>
+          <input id="inputemail" type ="text" name="email id"/> 
+        </p>
+        <p><label id ="label" for ="inputpass">Password</label>
+          <input id="inputpass" type ="password" name="password"/>
+        </p>
+        <p><label id ="label" >Gender</label>
+          <input id="radiomale"  type="radio" name="Gender" value="Male">&nbsp;
+          <label id ="Gender" for="radiomale" >Male</label>&nbsp;
+          <input id="radiofemale"  type="radio" name="Gender" value="Female">&nbsp;
+          <label id ="Gender" for="radiofemale" >Female</label>
+        <p><label id ="label"  >Date of birth</label>
+          <select id="date"name="date">
+            <option>Date</option>
+          </select>
+          <select id="date" >
+            <option>Month</option>
+          </select>
+          <select id="date" >
+            <option>Year</option>
+          </select>
+        </p>
+        <p><label id ="label" for="input5">Address</label>
+          <textarea id="address" name="address"> </textarea>
+        </p>
+        <p><input id="button"type = "submit" name ="submitted" value ="Submit Details" onclick = "return submitDisplay ()" />
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
