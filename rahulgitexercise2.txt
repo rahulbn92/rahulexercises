@@ -1,0 +1,561 @@
+
+
+
+1. Create a repository. 
+
+
+	mkdir repo
+	cd repo
+	git init
+
+
+
+2.Make some changes -- add some files, change content of some files
+
+	echo "hello comp" > test.txt
+	echo "hello test" > test1.txt
+	git add test.txt
+	git add test1.txt
+
+	echo "hello no" > test.txt   // making changes to test.txt file//
+	git add test.txt
+
+
+3.commit changes
+
+	echo "heelo comp" > test.txt
+	git add test.txt
+	git commit -m "create a test"
+
+
+4.repeat steps 1-3 for 2 more times. try to remove and ignore some files . Use git diff before each commit.
+
+	mkdir arun
+	cd arun
+	git init
+	echo "john is back" > john.txt				// file created
+	echo "readme" > readme.txt
+	git add john.txt
+	echo "john is not back" > john.txt			changes made to john.txt
+	git diff
+	 	 diff --git a/john.txt b/john.txt
+		index d00527e..259a57f 100644
+		--- a/john.txt
+		+++ b/john.txt
+		@@ -1 +1 @@
+		-john is back
+		+john is not back
+	
+	
+	rm john.txt                                                // file is removed
+	git diff
+
+		diff --git a/john.txt b/john.txt
+		deleted file mode 100644
+		index d00527e..0000000
+		--- a/john.txt
+		+++ /dev/null
+		@@ -1 +0,0 @@
+		-john is back
+
+
+
+5. create changes and revert those changes using git when those changes are not added to staging are
+
+	echo "people" > rahul.txt      // file is created
+	cat rahul.txt
+		people
+
+	git add rahul.txt
+	echo "people are not people" > rahul.txt       // changes made but not added to staging area
+	cat rahul.txt
+		people are not people
+	git checkout -- rahul.txt  			// changes are reverted without adding to staging area
+	cat rahul.txt
+		people
+
+
+6.create changes and revert those changes after adding changes to staging area    *
+
+	echo "people" > rahul.txt			file is created
+	cat rahul.txt
+		people
+
+	git add rahul.txt 			
+	git reset HEAD rahul.txt			// unstaging the file
+	
+	
+7. create change and revert those changes after committing those changes .          *
+
+	
+	echo "people" > rahul.txt      // file is created
+	cat rahul.txt
+		people
+
+	git add rahul.txt
+	git commit - m "create a rahul"
+	git reset -- HARD HEAD^
+
+		Unstaged changes after reset:
+		M	rahul.txt
+
+8. Check repository status before adding changes to staging area, after adding changes to staging area and after committing changes .
+
+	git init	
+	echo "people" > rahul.txt
+	git status
+
+		# On branch master
+		#
+		# Initial commit
+		#
+		# Untracked files:
+		#   (use "git add <file>..." to include in what will be committed)
+		#
+		#	rahul.txt
+
+	git add rahul.txt
+	git status
+
+		# On branch master
+		#
+		# Initial commit
+		#
+		# Changes to be committed:
+		#   (use "git rm --cached <file>..." to unstage)
+		#
+		#	new file:   rahul.txt
+
+	git commit -m "create a rahul"
+	git status
+
+		# On branch master
+		nothing to commit (working directory clean)
+
+	echo "people are not good" > rahul.txt       // changes made bt not added to staging area
+	git status
+	git add rahul.txt
+	git status					// status after  adding to staging area
+	
+		# On branch master
+		# Changes to be committed:
+		#   (use "git reset HEAD <file>..." to unstage)
+		#
+		#	modified:   rahul.txt
+		#
+
+	git commit -m "create a rahul"
+
+		[master 6e2aff3] create a rahul
+		 Committer: root <root@vinsol-HP-Pavilion-dv2000-GJ175PA-ACJ.(none)>
+		Your name and email address were configured automatically based
+		on your username and hostname. Please check that they are accurate.
+		You can suppress this message by setting them explicitly:
+		
+		    git config --global user.name "Your Name"
+		    git config --global user.email you@example.com
+		
+		After doing this, you may fix the identity used for this commit with:
+		
+		    git commit --amend --reset-author
+		
+		 1 file changed, 1 deletion(-)
+
+	git status					// changes after commiting
+
+		# On branch master
+		nothing to commit (working directory clean)
+
+
+		echo "people are bad" > rahul.txt		// changes made to file
+		git add rahul.txt
+
+			# On branch cat
+		# Changes to be committed:
+		#   (use "git reset HEAD <file>..." to unstage)
+		#
+		#	new file:   rahul.txt
+		
+	git commit -m "create a rahul"
+	git status
+
+		
+		[cat 782a9b4] create a rahul
+		 Committer: root <root@vinsol-HP-Pavilion-dv2000-GJ175PA-ACJ.(none)>
+		Your name and email address were configured automatically based
+		on your username and hostname. Please check that they are accurate.
+		You can suppress this message by setting them explicitly:
+		
+		    git config --global user.name "Your Name"
+		    git config --global user.email you@example.com
+		
+		After doing this, you may fix the identity used for this commit with:
+		
+		    git commit --amend --reset-author
+		
+		 1 file changed, 1 insertion(+)
+		 create mode 100644 rahul.txt
+		
+
+	
+9. Display all the commits .
+
+	git log 					// after commiting the rahul.txt
+
+		commit 6e2aff3fb5eef60e97f6b51459de25d1ea7a17d2
+		Author: root <root@vinsol-HP-Pavilion-dv2000-GJ175PA-ACJ.(none)>
+		Date:   Fri Jun 21 12:24:34 2013 +0530
+		
+		    create a rahul
+		
+		commit e017c17af1407637facc6d0c4fce188472c0dcf1
+		Author: root <root@vinsol-HP-Pavilion-dv2000-GJ175PA-ACJ.(none)>
+		Date:   Fri Jun 21 12:19:18 2013 +0530
+		
+		    create a rahul
+
+	
+10. Display a specific commit 
+
+	git log rahul.txt				// showing specific commit of rahul.txt
+
+		commit 6e2aff3fb5eef60e97f6b51459de25d1ea7a17d2
+		Author: root <root@vinsol-HP-Pavilion-dv2000-GJ175PA-ACJ.(none)>
+		Date:   Fri Jun 21 12:24:34 2013 +0530
+		
+		    create a rahul
+		
+		commit e017c17af1407637facc6d0c4fce188472c0dcf1
+		Author: root <root@vinsol-HP-Pavilion-dv2000-GJ175PA-ACJ.(none)>
+		Date:   Fri Jun 21 12:19:18 2013 +0530
+		
+		    create a rahul
+
+11.create branches called "feature1" and "feature2" from master. 11 . Delete branch "feature2"
+
+	git branch feature1
+	git checkout feature1
+
+		Switched to branch 'feature1'
+
+	git branch feature2
+	git checkout feature2
+
+		Switched to branch 'feature2'
+
+	git branch to master
+
+		Switched to branch 'master'
+
+	git branch -d feature1
+
+		Deleted branch feature1 (was 6e2aff3)
+
+
+12. Make some commits on "feature1".
+
+	
+	git checkout feature1
+
+		Switched to branch 'feature1'
+
+	echo "" > rag.txt
+	git add rag.txt
+	git commit -m "create a rag"
+
+		[feature1 bb09d11] craete a rag
+ 		Committer: root <root@vinsol-HP-Pavilion-dv2000-GJ175PA-ACJ.(none)>
+		Your name and email address were configured automatically based
+		on your username and hostname. Please check that they are accurate.
+		You can suppress this message by setting them explicitly:
+		    git config --global user.name "Your Name"
+		    git config --global user.email you@example.com
+
+		After doing this, you may fix the identity used for this commit with:
+
+		    git commit --amend --reset-author
+
+		 1 file changed, 1 insertion(+)
+ 		create mode 100644 rag.txt
+
+		
+13. Make some commits on branch "master".
+
+	git checkout master
+
+		Switched to branch 'master'
+	echo "hello" > rajiv.txt
+
+	git add rajiv.txt
+	git commit -m  "create a rajiv"
+
+		[master db3948a] create a rajiv
+		 Committer: root <root@vinsol-HP-Pavilion-dv2000-GJ175PA-ACJ.(none)>
+		Your name and email address were configured automatically based
+		on your username and hostname. Please check that they are accurate.
+		You can suppress this message by setting them explicitly:
+		
+		    git config --global user.name "Your Name"
+		    git config --global user.email you@example.com
+		
+		After doing this, you may fix the identity used for this commit with:
+		
+		    git commit --amend --reset-author
+		
+		 1 file changed, 1 insertion(+)
+		 create mode 100644 rajiv.txt
+
+		
+
+14.merge branch "feature1" in "master" (make some conflicts by changing same file on same line in both the branches) 15.create branch "feature2" from master 
+
+
+	git checkout feature1
+
+	echo "hello" > raj.txt
+	git add raj.txt
+	git commit -m "create a raj"
+
+	git checkout master
+	
+	echo "yellow" > raj.txt
+	git add raj.txt
+	git commit -m "create a raj"
+
+	git merge feature1
+
+
+			Auto-merging raj.txt
+			CONFLICT (content): Merge conflict in raj.txt
+			Automatic merge failed; fix conflicts and then commit the result.
+	
+	vi raj.txt
+	cat raj.txt
+
+			hello
+	git commit -a 
+
+			[master 7b1d3d7] Merge branch 'f1'
+			 Committer: root <root@vinsol-HP-Pavilion-dv2000-GJ175PA-ACJ.(none)>
+			Your name and email address were configured automatically based
+			on your username and hostname. Please check that they are accurate.
+			You can suppress this message by setting them explicitly:
+	
+		    git config --global user.name "Your Name"
+			    git config --global user.email you@example.com
+			
+			After doing this, you may fix the identity used for this commit with:
+		
+		    git commit --amend --reset-author
+
+	git branch feature2
+ 	
+
+
+
+
+15.Make some commits on "feature2".
+
+		
+		git checkout feature2
+
+			Switched to branch 'feature2'
+
+
+		echo "hello" > feat.txt
+		git add feat.txt
+		git commit -m "create a feat"
+
+			 [feature2 07dfe3c] create a feat
+			 Committer: root <root@vinsol-HP-Pavilion-dv2000-GJ175PA-ACJ.(none)>
+			Your name and email address were configured automatically based
+			on your username and hostname. Please check that they are accurate.
+			You can suppress this message by setting them explicitly:
+		
+		    git config --global user.name "Your Name"
+		    git config --global user.email you@example.com
+		
+			After doing this, you may fix the identity used for this commit with:
+		
+		    git commit --amend --reset-author
+			
+			 1 file changed, 1 insertion(+)
+			 create mode 100644 feat.txt
+
+	
+	
+16.Make some commits on branch "master"
+
+
+	git checkout master
+
+		Switched to branch 'master'
+	echo "hello" > rajiv.txt
+
+	git add rajiv.txt
+	git commit -m  "create a rajiv"
+
+		
+					
+		 [master db3948a] create a rajiv
+		 Committer: root <root@vinsol-HP-Pavilion-dv2000-GJ175PA-ACJ.(none)>
+		Your name and email address were configured automatically based
+		on your username and hostname. Please check that they are accurate.
+		You can suppress this message by setting them explicitly:
+		
+		    git config --global user.name "Your Name"
+		    git config --global user.email you@example.com
+		
+		After doing this, you may fix the identity used for this commit with:
+		
+		    git commit --amend --reset-author
+		
+		 1 file changed, 1 insertion(+)
+		 create mode 100644 rajiv.txt
+
+
+17.rebase branch "master" in "feature2" (make some conflicts by changing same file on same line in both the branches) .
+
+
+	git branch feature1
+
+	echo "hello" > raj.txt
+	git add raj.txt
+	git commit -m "create a raj"
+
+	git branch master
+	
+	echo "yellow" > raj.txt
+	git add raj.txt
+	git commit -m "create a raj"
+
+	git checkout feature1
+	git rebase master
+
+			Current branch master is up to date.
+
+	git checkout master
+	git merge feature1
+
+			Already up-to-date.
+
+
+18.find the differences between "merge" and "rebase" in above cases.
+
+	here a temporary folder is created and 
+
+	-> initially all the commits of master are send to temporary folder
+	-> then the origin master commits are send to master 
+	->finaaly all the commits run in temporary folder
+
+	whereas in merge 
+
+	-> all the commits get merged in one place 	
+	-> ther is no such temporary folder
+	-> it gets messy smtimes
+
+19. use git stash.
+
+
+
+
+	mkdir true
+	git init
+	git branch cat
+	git checkout master
+
+	echo "hello " > t.txt
+
+	git checkout cat
+	echo "hello" > cat.txt
+	
+	git checkout master
+	vi t.txt
+	
+	-> here we change the text of t.txt to hello delhi
+
+	git status
+
+		# On branch master
+		# Changes not staged for commit:
+		#   (use "git add <file>..." to update what will be committed)
+		#   (use "git checkout -- <file>..." to discard changes in working directory)
+		#
+		#	modified:   t.txt
+		#
+		# Untracked files:
+		#   (use "git add <file>..." to include in what will be committed)
+		#
+		#	cat.txt
+		
+	git stash
+
+		Saved working directory and index state WIP on master: cbf479c create a t
+		HEAD is now at cbf479c create a t
+	
+	git status
+
+		# On branch master
+		# Untracked files:
+		#   (use "git add <file>..." to include in what will be committed)
+		#
+		#	cat.txt
+		nothing added to commit but untracked files present (use "git add" to track)
+
+	git checkout cat
+
+		Switched to branch 'cat'
+
+	cat t.txt
+	
+		hello
+	
+	git checkout master
+
+		Switched to branch 'cat'
+
+	git stash apply
+	
+		# On branch master
+		# Changes not staged for commit:
+		#   (use "git add <file>..." to update what will be committed)
+		#   (use "git checkout -- <file>..." to discard changes in working directory)
+		#
+		#	modified:   t.txt
+		#
+		# Untracked files:
+		#   (use "git add <file>..." to include in what will be committed)
+		#
+		#	cat.txt
+		no changes added to commit (use "git add" and/or "git commit -a")
+
+	cat t.txt
+
+		hello delhi
+
+
+
+20. create a repository on github for your working repository and push changes on remote repository.
+
+	CREATING A REPOSITORY
+
+->  GO TO GITHUB.COM
+->  MAKE A ACCOUNT AND GIVE YOUR REPOSITORY NAME (DEFAULT IS ORIGIN)
+
+	PUSHING FILES
+
+	git remote add git_hub (repository name) https://github.com/rahulbn92/git_hub.git
+	git remote --v
+
+		 git_hub	https://github.com/rahulbn92/git_hub.git (fetch)
+		git_hub	https://github.com/rahulbn92/git_hub.git (push)
+
+	git push -u git_hub master
+
+		Username for 'https://github.com': rahulbn92
+		password for 'https://rahulbn92@github.com': **********
+
+-> 	REFRESH YOUR ACCOUNT AND FILES WILL BE THERE
+	
+		
+

@@ -1,15 +1,28 @@
+<<<<<<< HEAD
 <style>
   #header2
     {
        margin-left: 0px;
+=======
+<!DOCTYPE CSS>
+
+  header 
+    {
+      border-bottom: solid 2px #db2927;
+>>>>>>> 08b0e96d5a70d6c6a005a03c2341c34a9a1a9a1d
     }
   #header1
     {
       background: url("vinsol-logo.png");
       height: 70px;
+<<<<<<< HEAD
       width: 1270px;
       background-repeat: no-repeat;
       border-bottom: solid 2px #db2927;
+=======
+      width: 200px;
+      background-repeat: no-repeat;
+>>>>>>> 08b0e96d5a70d6c6a005a03c2341c34a9a1a9a1d
     }
   #header2
     {
@@ -33,7 +46,11 @@
   #heading
     {
       margin-top: 20px;
+<<<<<<< HEAD
       margin-left: 350px;
+=======
+      margin-left: 200px;
+>>>>>>> 08b0e96d5a70d6c6a005a03c2341c34a9a1a9a1d
       font-family: tahoma;
       font-size: 18px;
       color: #2c286d;
@@ -42,12 +59,20 @@
     {
       border: solid 1px #bcbcbc;
       background-color: #ececec;
+<<<<<<< HEAD
       width: 500px;
+=======
+      width: 448px;
+>>>>>>> 08b0e96d5a70d6c6a005a03c2341c34a9a1a9a1d
       padding-top: 20px;
       padding-bottom: 20px;
       padding-left: 25px;
       padding-right: 25px;
+<<<<<<< HEAD
       margin-left: 350px;
+=======
+      margin-left: 200px;
+>>>>>>> 08b0e96d5a70d6c6a005a03c2341c34a9a1a9a1d
     }
   #label
     {
@@ -55,7 +80,11 @@
       font-family: tahoma;
       color: black;
       display: inline-block;
+<<<<<<< HEAD
       width: 80px;
+=======
+      width: 64px;
+>>>>>>> 08b0e96d5a70d6c6a005a03c2341c34a9a1a9a1d
       text-align: right;
       margin-right: 20px;
     }
@@ -70,9 +99,12 @@
    #address
     {
       background-color: white;
+<<<<<<< HEAD
       position: relative;
       top: -15px;
       left: 20px;
+=======
+>>>>>>> 08b0e96d5a70d6c6a005a03c2341c34a9a1a9a1d
       border: solid 1px #b9b9b9;
       width: 358px;
       height: 133px;
@@ -101,6 +133,11 @@
       font-family: tahoma;
       font-size: 14px;
       color: white;
+<<<<<<< HEAD
       margin-left: 105px;
     }
 </style>
+=======
+      margin-left: 85px;
+    }
+>>>>>>> 08b0e96d5a70d6c6a005a03c2341c34a9a1a9a1d
