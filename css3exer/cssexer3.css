@@ -1,0 +1,114 @@
+<style>
+  #header
+    {
+      margin-left: 0px;
+    }
+  #header1
+    {
+      background-image: url("vinsol-logo.png");
+      height: 70px;
+      width: 1350px;
+      border-bottom: solid 2px #db2927;
+      background-repeat: no-repeat;
+    }
+  #header2
+    {
+      position: relative;
+      top :  -20px;
+      right: 5px;
+      float: right;
+    }
+  .subheader21
+    {
+      font-family: tahoma;
+      font-size: 13px;
+      color: black;
+    }
+  .subheader22
+    {
+      font-family: tahoma;
+      font-size: 13px;
+      color: blue;
+    }
+  #heading
+    {
+      margin-top: 20px;
+      margin-left: 400px;
+      font-family: tahoma;
+      font-size: 18px;
+      color: #2c286d;
+    }
+  #formbox
+    {
+      border: solid 1px #bcbcbc;
+      background-color: #ececec;
+      width: 480px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 25px;
+      padding-right: 25px;
+      margin-left: 400px;
+    }
+  #label
+    {
+      font-size: 14px;
+      font-family: tahoma;
+      color: black;
+      display: inline-block;
+      width: 90px;
+      text-align: right;
+      margin-right: 20px;
+    }
+  #label1
+    {
+      font-size: 14px;
+      font-family: tahoma;
+      color: black;
+      display: inline-block;
+      width: 90px;
+      text-align: right;
+      margin-right: 20px; 
+      position: relative;
+      top: -127px;
+    }  
+  #inputfn , #inputln , #inputpass , #inputemail
+    {
+      background-color: white;
+      border: solid 1px #b9b9b9;
+      width: 358px;
+      height: 23px;
+      display: inline-block;
+    }
+   #address
+    {
+      background-color: white;
+      border: solid 1px #b9b9b9;
+      width: 358px;
+      height: 133px;
+    }
+  #Gender
+    {
+      font-size: 13px;
+      font-family: tahoma;
+      color: #6f6f6f;
+    }
+  #date
+    { 
+      width: 110px;
+      font-family: tahoma;
+      font-size: 13px;
+      color: #6f6f6f; 
+    }
+  #button
+    {
+      background-color: #dc2927;
+      border: solid 1px #a10200;
+      width: 128px;
+      height: 30px;
+      text-align: center;
+      font-family: tahoma;
+      font-size: 14px;
+      color: white;
+      margin-left: 115px;
+    }
+</style>
